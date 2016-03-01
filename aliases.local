@@ -1,3 +1,8 @@
+alias ls="ls --color=auto"
+alias ack='ACK_PAGER_COLOR="less -x4SRFX" ack'
+alias sz='source ~/.zshrc'
+alias todo='$EDITOR ~/.todo'
+
 if [ "`uname`" = "Darwin" ]; then
   alias run='open -a'
   alias flush_dns='sudo discoveryutil mdnsflushcache'
@@ -6,10 +11,6 @@ if [ "`uname`" = "Darwin" ]; then
 fi
 
 if [ "`uname`" = "Linux" ]; then
-  alias l="ls -alsF --color"
+  alias l="ls -alsF"
   alias fs='du -sch * .* | sort -h'
 fi
-
-alias ack='ACK_PAGER_COLOR="less -x4SRFX" ack'
-alias sz='source ~/.zshrc'
-alias todo='$EDITOR ~/.todo'
