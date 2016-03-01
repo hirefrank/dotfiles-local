@@ -1,0 +1,29 @@
+# pip should only run if there is a virtualenv currently activated
+export PIP_REQUIRE_VIRTUALENV=true
+# cache pip-installed packages to avoid re-downloading
+export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
+export WORKON_HOME=$HOME/.virtualenvs
+
+# path fun times
+export PATH="$HOME/.linuxbrew/bin:$PATH"
+export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
+export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
+
+# node
+export NPM_PACKAGES="$HOME/.npm-packages"
+export NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
+
+# defaults
+export PAGER=less
+export PROMPT='%{$fg_bold[blue]%}#%{$reset_color%} \
+%{$fg_bold[white]%}cloud-shell%{$reset_color%} \
+%{$fg[white]%}in%{$reset_color%} \
+%{$fg_bold[yellow]%}%~%{$reset_color%} 
+%{$fg_bold[red]%}$%{$reset_color%}$(git_prompt_info) '
+
+export NVM_DIR="/usr/local/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+
+source ~/.local/bin/virtualenvwrapper.sh
+source ~/.linuxbrew/opt/chruby/share/chruby/chruby.sh
+source ~/.linuxbrew/opt/chruby/share/chruby/auto.sh
