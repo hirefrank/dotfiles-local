@@ -1,3 +1,26 @@
+autoload smart-insert-last-word
+autoload -U compinit promptinit zcalc zsh-mime-setup
+autoload -U colors && colors
+
+compinit
+promptinit
+zsh-mime-setup
+
+HISTFILE=~/.history
+SAVEHIST=10000
+HISTSIZE=10000
+
+setopt APPEND_HISTORY
+setopt nohup;
+setopt AUTO_CD
+setopt MULTIOS
+setopt ZLE
+setopt NO_BEEP
+
+zle -N insert-last-word smart-insert-last-word
+bindkey '^]' insert-last-word
+bindkey '\e.' insert-last-word
+
 # pip should only run if there is a virtualenv currently activated
 export PIP_REQUIRE_VIRTUALENV=true
 # cache pip-installed packages to avoid re-downloading
