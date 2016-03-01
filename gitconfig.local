@@ -2,3 +2,6 @@
   l = log --pretty=colored
 [pretty]
   colored = format:%Cred%h%Creset %s %Cgreen(%cr) %C(bold blue)%an%Creset
+[user]
+  name = Frank Harris
+  email = frank@hirefrank.com
