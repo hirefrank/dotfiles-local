@@ -39,7 +39,7 @@ export NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
 # defaults
 export PAGER=less
 export PROMPT='%{$fg_bold[blue]%}#%{$reset_color%} \
-%{$fg_bold[white]%}cloud-shell%{$reset_color%} \
+%{$fg_bold[white]%}$DEVSHELL_PROJECT_ID%{$reset_color%} \
 %{$fg[white]%}in%{$reset_color%} \
 %{$fg_bold[yellow]%}%~%{$reset_color%} 
 %{$fg_bold[red]%}$%{$reset_color%}$(git_prompt_info) '
