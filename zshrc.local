@@ -21,6 +21,9 @@ zle -N insert-last-word smart-insert-last-word
 bindkey '^]' insert-last-word
 bindkey '\e.' insert-last-word
 
+# path fun times
+export PATH="$HOME/.bin:$PATH"
+
 # node
 export NPM_PACKAGES="$HOME/.npm-packages"
 export NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
@@ -35,3 +38,8 @@ export PROMPT='%{$fg_bold[blue]%}#%{$reset_color%} \
 
 export NVM_DIR="/usr/local/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+
+# chruby
+source /usr/local/share/chruby/chruby.sh
+source /usr/local/share/chruby/auto.sh
+chruby ruby-2.4.0
