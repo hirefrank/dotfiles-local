@@ -42,4 +42,4 @@ export NVM_DIR="/usr/local/nvm"
 # chruby
 source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh
-chruby ruby-2.4.0
+chruby ruby-2.4.2
